@@ -1,0 +1,149 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+
+html {
+  background: #393d44;
+  color: #fff;
+}
+
+nav {
+  background: #16171d;
+  color: #fff;
+  height: 70px;
+  font-size: 25px;
+  display: flex;
+  align-items: center;
+  padding: 0 10%;
+}
+
+nav ul {
+  list-style-type: none;
+}
+
+.gameContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 10%;
+  align-items: center;
+}
+
+.leftContainer {
+  position: relative;
+  display: grid;
+  grid-template-rows: repeat(3, 10vw);
+  grid-template-columns: repeat(3, 10vw);
+}
+
+.box {
+  border: 2px solid #fff;
+  font-size: 8vw;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box:hover {
+  background-color: #212122;
+}
+
+.rightContainer {
+  padding: 0 35px;
+  line-height: 40px;
+}
+
+.rightContainer h1 {
+  font-size: 2.5rem;
+}
+
+.info {
+  font-size: 25px;
+}
+
+.imgBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imgBox img {
+  width: 0;
+  margin: 10px 0;
+  transition: width 1s ease-in-out;
+}
+
+.br0 {
+  border-right: 0;
+}
+.bt0 {
+  border-top: 0;
+}
+.bl0 {
+  border-left: 0;
+}
+.bb0 {
+  border-bottom: 0;
+}
+
+.bRt {
+  border-top-left-radius: 10px;
+}
+
+.bRb {
+  border-bottom-left-radius: 10px;
+}
+
+.bRtR {
+  border-top-right-radius: 10px;
+}
+
+.bRbR {
+  border-bottom-right-radius: 10px;
+}
+
+#reset {
+  margin: 10px 25px;
+  padding: 6px 15px;
+  border-radius: 5px;
+  background: #fff;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: bolder;
+}
+
+.line {
+  background: #38ff42;
+  width: 0;
+  height: 3px;
+  position: absolute;
+  transition: width 1s ease-in-out;
+}
+
+@media screen and (max-width: 950px) {
+  .gameContainer {
+    flex-wrap: wrap;
+    margin-top: 20%;
+    gap: 5rem;
+  }
+
+  .rightContainer h1 {
+    font-size: 1.5rem;
+  }
+
+  .gameInfo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .leftContainer {
+    display: grid;
+    grid-template-rows: repeat(3, 20vw);
+    grid-template-columns: repeat(3, 20vw);
+  }
+}

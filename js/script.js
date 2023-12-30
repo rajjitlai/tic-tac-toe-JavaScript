@@ -41,6 +41,21 @@ const checkWin = () => {
     });
 };
 
+const checkDraw = () => {
+    let boxTexts = document.querySelectorAll(".boxText");
+    let filledCount = 0;
+    boxTexts.forEach((box) => {
+        if (box.innerText !== "") {
+            filledCount++;
+        }
+    });
+    if (filledCount === 9 && !gameOver) {
+        document.querySelector(".info").innerText = "Game ended in a draw!";
+        document.querySelector(".info").style.color = "#ffcc00"; // Set your preferred color
+        gameOver = true;
+    }
+};
+
 let boxes = document.getElementsByClassName("box");
 Array.from(boxes).forEach((element) => {
     let boxText = element.querySelector(".boxText");
@@ -48,8 +63,8 @@ Array.from(boxes).forEach((element) => {
         if (boxText.innerText === "") {
             boxText.innerText = userTurn;
             userTurn = changeTurn();
-            // turn.play();
             checkWin();
+            checkDraw();
             if (!gameOver) {
                 document.querySelector(".info").style.color = "#fd2000";
                 document.getElementsByClassName("info")[0].innerText =
@@ -68,8 +83,6 @@ reset.addEventListener("click", () => {
     gameOver = false;
     document.querySelector(".info").style.color = "#fff";
     document.getElementsByClassName("info")[0].innerText = "Turn for " + userTurn;
-    document
-        .querySelector(".imgBox")
-        .getElementsByTagName("img")[0].style.width = "0";
+    document.querySelector(".imgBox").getElementsByTagName("img")[0].style.width = "0";
     document.querySelector('.line').style.width = "0";
 });

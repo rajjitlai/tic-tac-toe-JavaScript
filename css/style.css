@@ -79,12 +79,15 @@ nav ul {
 .br0 {
   border-right: 0;
 }
+
 .bt0 {
   border-top: 0;
 }
+
 .bl0 {
   border-left: 0;
 }
+
 .bb0 {
   border-bottom: 0;
 }
@@ -106,13 +109,19 @@ nav ul {
 }
 
 #reset {
+  border: none;
   margin: 10px 25px;
-  padding: 6px 15px;
-  border-radius: 5px;
+  padding: 10px 15px;
+  border-radius: 10px;
   background: #fff;
   cursor: pointer;
   font-size: 15px;
-  font-weight: bolder;
+  font-weight: 700;
+  transition: background 0.3s ease;
+}
+
+#reset:hover{
+  background: #d1d1d1;
 }
 
 .line {

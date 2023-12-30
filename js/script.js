@@ -6,6 +6,19 @@ console.log("Let's play TIC TAC TOE");
 let userTurn = "X";
 let gameOver = false;
 
+const userSelect = document.getElementById('userSelect');
+const userTypeDisplay = document.getElementById('userType');
+
+userSelect.addEventListener('change', function () {
+    if (!gameOver) {
+        userTurn = this.value;
+        userTypeDisplay.innerText = userTurn;
+        this.disabled = true;
+    } else {
+        this.selectedIndex = 0;
+    }
+});
+
 const changeTurn = () => {
     return userTurn === "X" ? "0" : "X";
 };

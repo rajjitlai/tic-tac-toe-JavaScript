@@ -16,7 +16,7 @@
 
         <div class="gameContainer">
             <div class="leftContainer">
-                <div class="line"></div>
+                <!-- <div class="line"></div> -->
                 <div class="box bt0 bl0 bRt"><span class="boxText"></span></div>
                 <div class="box bt0"><span class="boxText"></span></div>
                 <div class="box bt0 br0 bRtR"><span
@@ -32,7 +32,16 @@
             <div class="rightContainer">
                 <h1>Let's play TIC TAC TOE</h1>
                 <div class="gameInfo">
-                    <span class="info">Turn for X</span>
+                    <span class="info">Turn for <span
+                            id="userType">X</span></span>
+                    <div>
+                        <label for="userSelect">Select User Type: </label>
+                        <select id="userSelect">
+                            <option value="X">X</option>
+                            <option value="0">0</option>
+                        </select>
+                    </div>
+
                     <button type="reset" id="reset">Reset</button>
                 </div>
                 <div class="imgBox">

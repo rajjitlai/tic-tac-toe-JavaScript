@@ -120,17 +120,18 @@ nav ul {
   transition: background 0.3s ease;
 }
 
-#reset:hover{
+#reset:hover {
   background: #d1d1d1;
 }
 
+/* 
 .line {
   background: #38ff42;
   width: 0;
   height: 3px;
   position: absolute;
   transition: width 1s ease-in-out;
-}
+} */
 
 @media screen and (max-width: 950px) {
   .gameContainer {
@@ -155,4 +156,18 @@ nav ul {
     grid-template-rows: repeat(3, 20vw);
     grid-template-columns: repeat(3, 20vw);
   }
+}
+
+#userSelect {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  margin-bottom: 10px;
+  border: none;
+}
+
+#userSelect[disabled] {
+  opacity: 0.7;
+  pointer-events: none;
 }
